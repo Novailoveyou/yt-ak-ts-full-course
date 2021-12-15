@@ -6,6 +6,7 @@ class User implements UserInteface {
   protected firstName: string
   protected lastName: string
   readonly unchangableName: string
+  static readonly MaxAge = 50
 
   constructor(firstName: string, lastName: string) {
     this.firstName = firstName
