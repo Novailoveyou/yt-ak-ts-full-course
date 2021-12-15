@@ -1,6 +1,16 @@
-const someElement = document.querySelector('.foo') as HTMLInputElement
+class User {
+  private firstName: string
+  private lastName: string
 
-someElement.addEventListener('blur', e => {
-  const target = e.target as HTMLInputElement
-  console.log('event', target.value)
-})
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+
+  getFullName(): string {
+    return this.firstName + ' ' + this.lastName
+  }
+}
+
+const user = new User('Monster', 'lessons')
+console.log(user.getFullName())
