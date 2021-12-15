@@ -1,8 +1,19 @@
+var User = /** @class */ (function () {
+    function User() {
+    }
+    return User;
+}());
 var user = {
     name: 'Nover',
-    age: 24
+    age: 24,
+    getMessage: function () {
+        return 'Hello ' + name;
+    }
 };
 var user2 = {
     name: 'Jack',
-    age: 20
+    getMessage: function () {
+        return 'Hello ' + name;
+    }
 };
+console.log(user.getMessage());

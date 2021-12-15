@@ -1,9 +1,24 @@
-const user: { name: string; age: number } = {
-  name: 'Nover',
-  age: 24
+class User {}
+
+interface IUser {
+  name: string
+  age?: number
+  getMessage(): string
 }
 
-const user2: { name: string; age: number } = {
-  name: 'Jack',
-  age: 20
+const user: IUser = {
+  name: 'Nover',
+  age: 24,
+  getMessage() {
+    return 'Hello ' + name
+  }
 }
+
+const user2: IUser = {
+  name: 'Jack',
+  getMessage() {
+    return 'Hello ' + name
+  }
+}
+
+console.log(user.getMessage())
