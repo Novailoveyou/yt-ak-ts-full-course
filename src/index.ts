@@ -1,24 +1,12 @@
-class User {}
-
-interface IUser {
+interface UserInterface {
   name: string
-  age?: number
-  getMessage(): string
+  surname: string
 }
 
-const user: IUser = {
-  name: 'Nover',
-  age: 24,
-  getMessage() {
-    return 'Hello ' + name
-  }
-}
+let username: string = 'alex'
 
-const user2: IUser = {
-  name: 'Jack',
-  getMessage() {
-    return 'Hello ' + name
-  }
-}
+let pageName: string | number = '1'
 
-console.log(user.getMessage())
+let errorMessage: string | null = null
+
+let user: UserInterface | null = null
