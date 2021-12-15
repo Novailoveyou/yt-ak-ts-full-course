@@ -23,7 +23,13 @@ tsc index
 Watch ts file to js
 
 ```zsh
-tsc --watch index 
+tsc --watch index
+```
+
+or
+
+```zsh
+tsc -w index 
 ```
 
 Compile ts files to js
@@ -36,6 +42,12 @@ Watch ts files to js
 
 ```zsh
 tsc --watch 
+```
+
+or
+
+```zsh
+tsc -w 
 ```
 
 Init tsconfig.json
