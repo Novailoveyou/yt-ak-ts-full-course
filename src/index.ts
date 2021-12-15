@@ -23,10 +23,21 @@ class User implements UserInteface {
   }
 }
 
-class Admin extends User {}
+class Admin extends User {
+  private editor: string
+
+  setEditor(editor: string): void {
+    this.editor = editor
+  }
+
+  getEditor(): string {
+    return this.editor
+  }
+}
 
 const user = new User('Monster', 'lessons')
 console.log(user)
 console.log(User.maxAge)
 
 const admin = new Admin('Foo', 'Bar')
+console.log(admin.editor)
