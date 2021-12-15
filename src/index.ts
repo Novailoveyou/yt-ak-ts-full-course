@@ -1,5 +1,9 @@
-const getFullName = (name: string, lastname: string): string => {
-  return name + ' ' + lastname
+const user: { name: string; age: number } = {
+  name: 'Nover',
+  age: 24
 }
 
-console.log(getFullName('Monster', 'Lessons'))
+const user2: { name: string; age: number } = {
+  name: 'Jack',
+  age: 20
+}
