@@ -1,4 +1,8 @@
-class User {
+interface UserInteface {
+  getFullName(): string
+}
+
+class User implements UserInteface {
   protected firstName: string
   protected lastName: string
   readonly unchangableName: string
