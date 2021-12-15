@@ -1,5 +1,6 @@
 type ID = string
 type PopularTag = string
+type MaybePopularTag = PopularTag | null
 
 interface UserInterface {
   id: ID
@@ -8,6 +9,8 @@ interface UserInterface {
 }
 
 const popularTags: PopularTag[] = ['dragon', 'coffee']
+
+const dragonsTag: MaybePopularTag = 'dragon'
 
 let username: string = 'alex'
 
