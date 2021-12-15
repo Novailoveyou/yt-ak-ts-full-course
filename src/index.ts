@@ -1,6 +1,5 @@
-const doSomething = (): void => {
-  console.log('doSomething')
-  return 1
+const doSomething = (): never => {
+  throw 'never'
 }
 
 let foo: any = undefined
