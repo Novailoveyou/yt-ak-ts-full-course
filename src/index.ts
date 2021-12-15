@@ -23,5 +23,10 @@ class User implements UserInteface {
   }
 }
 
+class Admin extends User {}
+
 const user = new User('Monster', 'lessons')
-console.log(user.firstName)
+console.log(user)
+console.log(User.maxAge)
+
+const admin = new Admin('Foo', 'Bar')
