@@ -1,43 +1,19 @@
-interface UserInteface {
-  getFullName(): string
-}
-
-class User implements UserInteface {
-  protected firstName: string
-  protected lastName: string
-  readonly unchangableName: string
-  static readonly MaxAge = 50
-
-  constructor(firstName: string, lastName: string) {
-    this.firstName = firstName
-    this.lastName = lastName
-    this.unchangableName = firstName
-  }
-
-  changeUnchangableName(): void {
-    // this.unchangableName = 'foo'
-  }
-
-  getFullName(): string {
-    return this.firstName + ' ' + this.lastName
+const addId = <T extends object>(obj: T) => {
+  const id = Math.random().toString(16)
+  return {
+    ...obj,
+    id
   }
 }
 
-class Admin extends User {
-  private editor: string
-
-  setEditor(editor: string): void {
-    this.editor = editor
-  }
-
-  getEditor(): string {
-    return this.editor
-  }
+interface IUser {
+  name: string
 }
 
-const user = new User('Monster', 'lessons')
-console.log(user)
-console.log(User.maxAge)
+const user: IUser = {
+  name: 'Jack'
+}
 
-const admin = new Admin('Foo', 'Bar')
-console.log(admin.editor)
+const result = addId<IUser>(user)
+
+console.log('result', result)
