@@ -6,16 +6,18 @@ const addId = <T extends object>(obj: T) => {
   }
 }
 
-interface IUser<T> {
+interface IUser<T, V> {
   name: string
   data: T
+  meta: V
 }
 
-const user: IUser<{ meta: string }> = {
+const user: IUser<{ meta: string }, string> = {
   name: 'Jack',
   data: {
     meta: 'foo'
-  }
+  },
+  meta: 'bar'
 }
 
 const user2: IUser<string[]> = {
