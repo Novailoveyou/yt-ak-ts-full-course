@@ -1,30 +1,24 @@
-const addId = <T extends object>(obj: T) => {
-  const id = Math.random().toString(16)
-  return {
-    ...obj,
-    id
-  }
+// const statuses = {
+//   notStarted: 0,
+//   inProgress: 1,
+//   done: 2
+// }
+
+// console.log(statuses.inProgress)
+
+enum Status {
+  NotStarted = 'notStarted',
+  InProgress = 'inProgress',
+  Done = 'Done'
 }
 
-interface IUser<T, V> {
-  name: string
-  data: T
-  meta: V
+interface Task {
+  id: string
+  status: Status
 }
 
-const user: IUser<{ meta: string }, string> = {
-  name: 'Jack',
-  data: {
-    meta: 'foo'
-  },
-  meta: 'bar'
-}
+let notStartedStatus: Status = Status.NotStarted
 
-const user2: IUser<string[]> = {
-  name: 'John',
-  data: ['foo', 'bar', 'baz']
-}
+// notStartedStatus = 'foo'
 
-const result = addId<IUser>(user)
-
-console.log('result', result)
+console.log(Status.InProgress)
