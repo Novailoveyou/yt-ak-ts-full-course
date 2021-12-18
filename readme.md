@@ -2,7 +2,7 @@
 
 ## About
 
-This is me following FreeCodeCamp's [youtube video](https://youtu.be/gp5H0Vw39yw)
+This is me following Alexander Kochergin's at freeCodeCapm [youtube video](https://youtu.be/gp5H0Vw39yw)
 
 Year 2021
 
